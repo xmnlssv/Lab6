@@ -1,0 +1,172 @@
+01:05:15.058 [main] INFO  client - Initialized connection to server on port 162
+20:07:35.183 [main] INFO  client - Initialized connection to server on port 162
+20:07:43.244 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:43.280 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.HelpCommand","args":[]}
+20:07:43.781 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.HelpCommand","args":[]},"response":"execute_script filename                     : read and execute script from given file. The same views are found in the script as in the interactive mode\nremove_greater {element}                    : remove all items from the collection that exceed the specified\nshow                                        : output to the standard output stream all elements of the collection in string representation\nclear                                       : remove all items from collection\nsort                                        : sort the collection in natural order\nremove_last                                 : remove the last item from the collection\nremove_any_by_author author                 : remove one item from the collection whose author field value is equivalent to a given\nmin_by_author                               : output any object in the collection whose author field value is the minimum\nadd {element}                               : add new item to collection\nupdate id {element}                         : update the value of the collection element whose Id matches the given one\nprint_field_descending_minimal_point        : output the values of the field minimalPoint of all elements in descending order\nhelp                                        : get help on alternative commands\nremove_by_id id                             : remove an element from the collection by its Id\ninfo                                        : print all collection items into the string representation\n","result":"SUCCESS"}
+20:07:43.783 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.HelpCommand","args":[]},"response":"execute_script filename                     : read and execute script from given file. The same views are found in the script as in the interactive mode\nremove_greater {element}                    : remove all items from the collection that exceed the specified\nshow                                        : output to the standard output stream all elements of the collection in string representation\nclear                                       : remove all items from collection\nsort                                        : sort the collection in natural order\nremove_last                                 : remove the last item from the collection\nremove_any_by_author author                 : remove one item from the collection whose author field value is equivalent to a given\nmin_by_author                               : output any object in the collection whose author field value is the minimum\nadd {element}                               : add new item to collection\nupdate id {element}                         : update the value of the collection element whose Id matches the given one\nprint_field_descending_minimal_point        : output the values of the field minimalPoint of all elements in descending order\nhelp                                        : get help on alternative commands\nremove_by_id id                             : remove an element from the collection by its Id\ninfo                                        : print all collection items into the string representation\n","result":"SUCCESS"}
+20:07:48.216 [main] INFO  server - Saving collection to file...
+20:07:48.277 [main] INFO  server - Successfully saved collection to file!
+20:07:48.278 [main] INFO  server - Server exiting...
+20:07:53.233 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:53.235 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:53.733 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:53.735 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:54.404 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:54.405 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:54.904 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:54.904 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:55.404 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:55.404 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:55.904 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:55.905 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:56.404 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:56.406 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:56.904 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:56.905 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:57.404 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:57.405 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:57.904 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:57.905 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:58.404 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:58.405 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:58.904 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:58.905 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:59.404 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:59.405 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:07:59.904 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:07:59.904 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:80)
+	at client.Client.listen(Client.java:42)
+	at client.Client.lambda$initializeConnection$0(Client.java:66)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+20:08:00.404 [Thread-0] INFO  client - Sending payload to server: {"command":"command.HelpCommand","args":[]}
+20:08:00.434 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.HelpCommand","args":[]}
+20:08:01.035 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.HelpCommand","args":[]},"response":"execute_script filename                     : read and execute script from given file. The same views are found in the script as in the interactive mode\nremove_greater {element}                    : remove all items from the collection that exceed the specified\nshow                                        : output to the standard output stream all elements of the collection in string representation\nclear                                       : remove all items from collection\nsort                                        : sort the collection in natural order\nremove_last                                 : remove the last item from the collection\nremove_any_by_author author                 : remove one item from the collection whose author field value is equivalent to a given\nmin_by_author                               : output any object in the collection whose author field value is the minimum\nadd {element}                               : add new item to collection\nupdate id {element}                         : update the value of the collection element whose Id matches the given one\nprint_field_descending_minimal_point        : output the values of the field minimalPoint of all elements in descending order\nhelp                                        : get help on alternative commands\nremove_by_id id                             : remove an element from the collection by its Id\ninfo                                        : print all collection items into the string representation\n","result":"SUCCESS"}
+20:08:01.038 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.HelpCommand","args":[]},"response":"execute_script filename                     : read and execute script from given file. The same views are found in the script as in the interactive mode\nremove_greater {element}                    : remove all items from the collection that exceed the specified\nshow                                        : output to the standard output stream all elements of the collection in string representation\nclear                                       : remove all items from collection\nsort                                        : sort the collection in natural order\nremove_last                                 : remove the last item from the collection\nremove_any_by_author author                 : remove one item from the collection whose author field value is equivalent to a given\nmin_by_author                               : output any object in the collection whose author field value is the minimum\nadd {element}                               : add new item to collection\nupdate id {element}                         : update the value of the collection element whose Id matches the given one\nprint_field_descending_minimal_point        : output the values of the field minimalPoint of all elements in descending order\nhelp                                        : get help on alternative commands\nremove_by_id id                             : remove an element from the collection by its Id\ninfo                                        : print all collection items into the string representation\n","result":"SUCCESS"}
+20:16:58.374 [main] INFO  client - Initialized connection to server on port 162
+20:17:13.502 [Thread-0] INFO  client - Sending payload to server: {"command":"command.MinByAuthorCommand","args":[]}
+20:17:13.534 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.MinByAuthorCommand","args":[]}
+20:17:14.002 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.MinByAuthorCommand","args":[]},"response":"{\"id\":1865653,\"name\":\"Kek\",\"coordinates\":{\"x\":1.0,\"y\":null},\"creationDate\":1687900769.502626000,\"minimalPoint\":1.0,\"difficulty\":\"EASY\",\"author\":{\"name\":\"Tanya\",\"passportId\":\"1\",\"eyeColor\":\"BLUE\",\"hairColor\":\"WHITE\",\"nationality\":\"INDIA\",\"location\":{\"x\":1.0,\"y\":null,\"z\":3}}}","result":"SUCCESS"}
+20:17:14.005 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.MinByAuthorCommand","args":[]},"response":"{\"id\":1865653,\"name\":\"Kek\",\"coordinates\":{\"x\":1.0,\"y\":null},\"creationDate\":1687900769.502626000,\"minimalPoint\":1.0,\"difficulty\":\"EASY\",\"author\":{\"name\":\"Tanya\",\"passportId\":\"1\",\"eyeColor\":\"BLUE\",\"hairColor\":\"WHITE\",\"nationality\":\"INDIA\",\"location\":{\"x\":1.0,\"y\":null,\"z\":3}}}","result":"SUCCESS"}
