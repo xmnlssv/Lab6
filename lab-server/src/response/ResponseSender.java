@@ -28,17 +28,4 @@ public class ResponseSender {
         }
         key.interestOps(SelectionKey.OP_READ);
     }
-    private static Response normalize(Response response) {
-        if (response.request().command() == AddCommand.class) {
-            LabWork labWork = (LabWork) ServerJsonSerializer.deserialize(response.request().args()[0], LabWork.class);
-            return new Response(
-                    response.request().command(),
-                    new String[]{ServerJsonSerializer.serialize(labWork.withId(null))},
-                    response.response(),
-                    response.result()
-            );
-        } else {
-            return response;
-        }
-    }
 }

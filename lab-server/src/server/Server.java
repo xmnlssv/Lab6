@@ -24,7 +24,9 @@ public class Server {
             printWriter.flush();
             printWriter.close();
             logger.info("Successfully saved collection to file!");
+            System.out.println("Successfully saved collection to file!");
         } catch (FileNotFoundException exception) {
+            System.err.println(String.format("Error saving collection: file %s not found", collectionFile));
             logger.error("Error saving collection: file {} not found.", collectionFile);
         }
     }

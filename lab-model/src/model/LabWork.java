@@ -261,8 +261,7 @@ public class LabWork implements Serializable, Comparable<LabWork> {
 
     @Override
     public int compareTo(LabWork o) {
-            return this.getAuthor().compareTo(o.getAuthor());
-
+        return this.getAuthor().compareTo(o.getAuthor());
     }
 
     public static class LabWorkBuilder {

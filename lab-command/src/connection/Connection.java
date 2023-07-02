@@ -1,5 +1,5 @@
 package connection;
 
 public class Connection {
-    public static final int PORT = 641;
+    public static int PORT = 17605;
 }

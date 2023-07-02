@@ -1,8 +1,10 @@
 package connection;
 
+import ch.qos.logback.classic.Logger;
 import request.RequestReceiver;
 import response.AddressedResponse;
 import response.ResponseSender;
+import utils.LogUtil;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -27,6 +29,7 @@ public class ConnectionManager {
     private static int bufferSize;
     private static RequestReceiver requestReceiver;
     public static Queue<AddressedResponse> responseQueue = new ConcurrentLinkedQueue<>();
+    private static Logger logger = LogUtil.getLogger("server");
     public static void initialize() {
         try {
             selector = Selector.open();
@@ -38,7 +41,7 @@ public class ConnectionManager {
             Thread thread = new Thread(ConnectionManager::listen);
             thread.start();
         } catch (IOException exception) {
-            System.err.println("IO exception on port connection.Connection.PORT: " + exception.getLocalizedMessage());
+            logger.error("IO exception on port " + PORT);
         }
     }
 
@@ -66,7 +69,7 @@ public class ConnectionManager {
                     }
                 }
             } catch (IOException exception) {
-                System.err.println("IO exception: " + exception.getLocalizedMessage());
+                logger.error("I/O exception while listening to selector: " + exception);
             }
         }
     }
@@ -76,9 +79,9 @@ public class ConnectionManager {
             if (channel != null) channel.close();
             if (selector != null) selector.close();
         } catch (IOException exception) {
-            System.err.println("Selector I/O Exception: " + exception.getLocalizedMessage());
+            logger.error("Selector I/O Exception: " + exception);
         } catch (ClosedSelectorException exception) {
-            System.err.println("Selector already closed: " + exception.getLocalizedMessage());
+            logger.error("Selector already closed: " + exception);
         }
     }
 }

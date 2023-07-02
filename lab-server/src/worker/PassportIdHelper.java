@@ -24,4 +24,8 @@ public class PassportIdHelper {
     public static boolean containsId(String passportId) {
         return passportIds.contains(passportId);
     }
+
+    public static void removeId(String passportId) {
+        passportIds.remove(passportId);
+    }
 }

@@ -90,9 +90,17 @@ public class Client {
 
     private static void write(SelectionKey key) {
         Instant now = clock.instant();
-        Optional<String> request = RequestQueue.REQUEST_QUEUE.entrySet().stream().filter((r) -> {
-            return (r.getValue().plus(500, ChronoUnit.MILLIS)).isBefore(now);
-        }).findAny().map(Map.Entry::getKey);
+        Optional<String> request;
+        while (true) {
+            try {
+                request = RequestQueue.REQUEST_QUEUE.entrySet().stream().filter((r) -> {
+                    return (r.getValue().plus(200, ChronoUnit.MILLIS)).isBefore(now);
+                }).findAny().map(Map.Entry::getKey);
+                break;
+            } catch (Exception exception) {
+                logger.info("Caught exception: " + exception);
+            }
+        }
         if (!request.isEmpty()) {
             try {
                 RequestQueue.REQUEST_QUEUE.put(request.get(), clock.instant());

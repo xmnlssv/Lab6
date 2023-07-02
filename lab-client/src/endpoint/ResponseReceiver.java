@@ -17,8 +17,11 @@ import command.RemoveLastCommand;
 import command.ShowCommand;
 import command.SortCommand;
 import command.UpdateCommand;
+import model.LabWork;
+import request.Request;
 import response.Response;
 import response.Result;
+import serializer.ClientJsonSerializer;
 
 import java.util.HashMap;
 
@@ -55,19 +58,33 @@ public class ResponseReceiver {
     }
 
     private void handle(Response response, int index) throws JsonProcessingException {
-        String request = new ObjectMapper().writeValueAsString(response.request());
-        if (RequestQueue.REQUEST_QUEUE.containsKey(request) && index == 0) {
-            RequestQueue.REQUEST_QUEUE.remove(request);
+        String request = ClientJsonSerializer.serialize(response.request());
+        String normalized = ClientJsonSerializer.serialize(normalize(response.request()));
+        if (RequestQueue.REQUEST_QUEUE.containsKey(normalized) && index == 0) {
+            RequestQueue.REQUEST_QUEUE.remove(normalized);
         }
         String readableName = readableNames.getOrDefault(response.request().command(), "unknown");
         if (response.result() == Result.SUCCESS) {
             System.out.println("Command [" + readableName + "] executed successfully!");
-            if (response.response() != null) {
-                System.out.println("Response:");
-                System.out.println(response.response());
-            }
         } else {
             System.out.println("Command [" + readableName + "] executed unsuccessfully.");
         }
+        if (response.response() != null) {
+            System.out.println("Response:");
+            System.out.println(response.response());
+        }
     }
+
+    private static Request normalize(Request request) {
+        if (request.command() == AddCommand.class) {
+            LabWork labWork = (LabWork) ClientJsonSerializer.deserialize(request.args()[0], LabWork.class);
+            return new Request(
+                    request.command(),
+                    new String[]{ClientJsonSerializer.serialize(labWork.withId(null))}
+            );
+        } else {
+            return request;
+        }
+    }
+
 }

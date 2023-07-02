@@ -111,14 +111,24 @@ public class Worker {
 
     public Response addAction(LabWork labWork) {
         labWork.setId(IdHelper.generateId());
-        collection.add(labWork);
-        IdHelper.saveId(labWork.getId());
-        return new Response(
-                AddCommand.class,
-                new String[]{ServerJsonSerializer.serialize(labWork)},
-                null,
-                Result.SUCCESS
-        );
+        if (IdHelper.containsId(labWork.getId()) || PassportIdHelper.containsId(labWork.getAuthor().getPassportId())) {
+            return new Response(
+                    AddCommand.class,
+                    new String[]{ServerJsonSerializer.serialize(labWork)},
+                    "Duplicate id / passport id",
+                    Result.FAILURE
+            );
+        } else {
+            collection.add(labWork);
+            IdHelper.saveId(labWork.getId());
+            PassportIdHelper.saveId(labWork.getAuthor().getPassportId());
+            return new Response(
+                    AddCommand.class,
+                    new String[]{ServerJsonSerializer.serialize(labWork)},
+                    null,
+                    Result.SUCCESS
+            );
+        }
     }
 
     public Response clearAction() {
@@ -134,8 +144,8 @@ public class Worker {
 
     public Response descendingMinimalPointAction() {
         StringBuilder stringBuilder = new StringBuilder();
-        collection.stream().sorted(Comparator.comparing(LabWork::getMinimalPoint).reversed()).forEach((point) -> {
-            stringBuilder.append(point).append("\n");
+        collection.stream().sorted(Comparator.comparing(LabWork::getMinimalPoint).reversed()).forEach((labWork) -> {
+            stringBuilder.append(labWork.getMinimalPoint()).append("\n");
         });
 
         return new Response(
@@ -249,7 +259,7 @@ public class Worker {
 
     public Response removeByAuthorAction(Person author) {
         Optional<LabWork> forDeletion = collection.stream().filter(labWork -> labWork.getAuthor().equals(author)).findAny();
-        if (forDeletion.isEmpty()) {
+        if (!forDeletion.isEmpty()) {
             return new Response(
                     RemoveByAuthorCommand.class,
                     new String[]{ServerJsonSerializer.serialize(forDeletion.get())},
@@ -276,6 +286,7 @@ public class Worker {
                     Result.FAILURE
             );
         } else {
+            collection.remove(forDeletion.get());
             return new Response(
                     RemoveByIdCommand.class,
                     new String[]{id + ""},
@@ -297,6 +308,14 @@ public class Worker {
     }
 
     public Response removeLastAction() {
+        if (collection.isEmpty()) {
+            return new Response(
+                    RemoveLastCommand.class,
+                    new String[]{},
+                    null,
+                    Result.FAILURE
+            );
+        }
         Integer id = (Integer) collection.get(collection.size() - 1).getId();
         IdHelper.removeId(id);
         collection.remove(collection.size() - 1);
@@ -310,7 +329,7 @@ public class Worker {
 
     public Response showAction() {
         StringBuilder info = new StringBuilder();
-        collection.stream().forEach((labWork) -> {
+        collection.stream().sorted().forEach((labWork) -> {
             info.append(labWork.toString()).append("\n");
         });
         return new Response(
@@ -342,13 +361,27 @@ public class Worker {
             );
         }
         collection.remove(forUpdate.get());
-        collection.add(updatedLabWork);
-        return new Response(
-                UpdateCommand.class,
-                new String[]{id + "", ServerJsonSerializer.serialize(updatedLabWork)},
-                null,
-                Result.SUCCESS
-        );
+        IdHelper.removeId(forUpdate.get().getId());
+        PassportIdHelper.removeId(forUpdate.get().getAuthor().getPassportId());
+        if (IdHelper.containsId(updatedLabWork.getId()) || PassportIdHelper.containsId(updatedLabWork.getAuthor().getPassportId())) {
+            collection.add(forUpdate.get());
+            IdHelper.saveId(forUpdate.get().getId());
+            PassportIdHelper.saveId(forUpdate.get().getAuthor().getPassportId());
+            return new Response(
+                    UpdateCommand.class,
+                    new String[]{id + "", ServerJsonSerializer.serialize(updatedLabWork)},
+                    "Duplicate id / passport id",
+                    Result.FAILURE
+            );
+        } else {
+            collection.add(updatedLabWork);
+            return new Response(
+                    UpdateCommand.class,
+                    new String[]{id + "", ServerJsonSerializer.serialize(updatedLabWork)},
+                    null,
+                    Result.SUCCESS
+            );
+        }
     }
 
 }

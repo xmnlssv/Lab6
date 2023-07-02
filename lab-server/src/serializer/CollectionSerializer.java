@@ -1,7 +1,9 @@
 package serializer;
 
+import ch.qos.logback.classic.Logger;
 import model.LabWork;
 import model.LabWorksArrayList;
+import utils.LogUtil;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -17,13 +19,19 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class CollectionSerializer {
+    private static Logger logger = LogUtil.getLogger("server");
     public static ArrayList<LabWork> unmarshal(String filePath) {
         ArrayList<LabWork> collection = new ArrayList<>();
         try {
-            final QName qName = new QName("labWork");
+            QName qName = new QName("labWork");
+            if (!Files.exists(Path.of(filePath))) {
+                Files.createFile(Path.of(filePath));
+            }
             InputStream inputStream = new FileInputStream(filePath);
             XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
             XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(inputStream);
@@ -39,12 +47,8 @@ public class CollectionSerializer {
                 }
             }
             return collection;
-        } catch (JAXBException jaxbException) {
-            System.err.println("XML syntax error");
-        } catch (XMLStreamException xmlStreamException) {
-            System.err.println("XML file reading exception");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+        } catch (Exception exception) {
+            logger.error("Exception while parsing XML from file: " + exception);
         }
         return collection;
     }
@@ -58,9 +62,8 @@ public class CollectionSerializer {
             StringWriter stringWriter = new StringWriter();
             marshaller.marshal(labWorkSetWrapper, stringWriter);
             return stringWriter.toString();
-        } catch (JAXBException e) {
-            System.err.println(e.getMessage());
-            e.printStackTrace();
+        } catch (Exception exception) {
+            logger.error("Exception while saving XML to file: " + exception);
             return "";
         }
     }
