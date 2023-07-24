@@ -1,3 +1,0 @@
-21:29:30.481 [main] ERROR server - IO exception on port 17605
-21:29:48.551 [main] INFO  server - Saving collection to file...
-21:29:48.576 [main] INFO  server - Successfully saved collection to file!

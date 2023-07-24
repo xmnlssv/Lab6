@@ -1,5 +1,6 @@
 package reader;
 
+import client.Client;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import endpoint.RequestQueue;
 import input.InputMode;
@@ -62,6 +63,10 @@ public class CommandReader {
             command = scanner.nextLine();
             String[] split = command.trim().toLowerCase().split(" ");
             if (split.length == 0) {
+                continue;
+            }
+            if (!Client.hasConnection()) {
+                System.out.println("Sorry, server is temporarily down. Please try again later.");
                 continue;
             }
             if (zeroArgMappings.containsKey(split[0])) {

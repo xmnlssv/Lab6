@@ -1,3 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<labWorksArrayList/>
+<labWorksArrayList>
+    <labWork>
+        <author>
+            <eyeColor>ORANGE</eyeColor>
+            <hairColor>YELLOW</hairColor>
+            <location>
+                <x>9.0</x>
+                <z>9</z>
+            </location>
+            <name>kd</name>
+            <nationality>INDIA</nationality>
+            <passportId>od</passportId>
+        </author>
+        <coordinates>
+            <x>1.0</x>
+        </coordinates>
+        <creationDate>2023-07-24T01:44:28.422849Z[UTC]</creationDate>
+        <difficulty>INSANE</difficulty>
+        <id>1670563</id>
+        <minimalPoint>1.0</minimalPoint>
+        <name>j</name>
+    </labWork>
+</labWorksArrayList>
 

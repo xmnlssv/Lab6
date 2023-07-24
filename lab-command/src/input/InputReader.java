@@ -10,6 +10,7 @@ import model.Location;
 import model.Person;
 
 import java.io.InputStream;
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -22,15 +23,47 @@ public class InputReader {
         this.inputMode = inputMode;
     }
 
+    public Double getDouble() {
+        try {
+            return Double.parseDouble(scanner.nextLine());
+        } catch (NumberFormatException exception) {
+            return null;
+        }
+    }
+
+    public Integer getInteger() {
+        try {
+            return Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException exception) {
+            return null;
+        }
+    }
+
+    public Float getFloat() {
+        try {
+            return Float.parseFloat(scanner.nextLine());
+        } catch (NumberFormatException exception) {
+            return null;
+        }
+    }
+
+    public Long getLong() {
+        try {
+            return Long.parseLong(scanner.nextLine());
+        } catch (NumberFormatException exception) {
+            return null;
+        }
+    }
+
     public String receiveName() {
         String name = "";
         while (true) {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter a name of lab work:");
             }
-            name = scanner.next();
+            name = scanner.nextLine();
             if (inputMode == InputMode.MANUAL && (name == null || name.isEmpty())) {
-                System.out.println("Entered name was empty. Please try again.");
+                System.out.println("Entered name was empty or invalid. Please try again.");
                 continue;
             }
             break;
@@ -44,7 +77,7 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter x-coordinate. It should be greater than -112.");
             }
-            x = scanner.nextDouble();
+            x = getDouble();
             if (inputMode == InputMode.MANUAL && (x == null || x <= -112)) {
                 System.out.println("Entered x-coordinate was empty or invalid. Please try again.");
                 continue;
@@ -60,9 +93,9 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter y-coordinate.");
             }
-            y = scanner.nextLong();
+            y = getLong();
             if (inputMode == InputMode.MANUAL && y == null) {
-                System.out.println("Entered y-coordinate was empty. Please try again.");
+                System.out.println("Entered y-coordinate was empty or invalid. Please try again.");
                 continue;
             }
             break;
@@ -80,9 +113,9 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter x-location.");
             }
-            x = scanner.nextFloat();
+            x = getFloat();
             if (inputMode == InputMode.MANUAL && x == null) {
-                System.out.println("Entered x-location was empty. Please try again.");
+                System.out.println("Entered x-location was empty or invalid. Please try again.");
                 continue;
             }
             break;
@@ -96,9 +129,9 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter y-location.");
             }
-            y = scanner.nextLong();
+            y = getLong();
             if (inputMode == InputMode.MANUAL && y == null) {
-                System.out.println("Entered y-location was empty. Please try again.");
+                System.out.println("Entered y-location was empty or invalid. Please try again.");
                 continue;
             }
             break;
@@ -112,9 +145,9 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter z-location.");
             }
-            z = scanner.nextInt();
+            z = getInteger();
             if (inputMode == InputMode.MANUAL && z == null) {
-                System.out.println("Entered z-location was empty. Please try again.");
+                System.out.println("Entered z-location was empty or invalid. Please try again.");
                 continue;
             }
             break;
@@ -135,7 +168,7 @@ public class InputReader {
                     System.out.print("Variants: \n1. BLUE; \n2. YELLOW; \n3. ORANGE; \n4. WHITE." +
                             " \nEnter your variant here: ");
                 }
-                String eyeChoose = scanner.next().toUpperCase(Locale.ROOT);
+                String eyeChoose = scanner.nextLine().toUpperCase(Locale.ROOT);
                 switch (eyeChoose) {
                     case "1":
                     case "BLUE":
@@ -173,7 +206,7 @@ public class InputReader {
                     System.out.print("Variants: \n1. GREEN; \n2. BLUE; \n3. YELLOW; \n4. ORANGE; \n5. WHITE." +
                             " \nEnter your variant here: ");
                 }
-                String hairChoose = scanner.next().toUpperCase(Locale.ROOT);
+                String hairChoose = scanner.nextLine().toUpperCase(Locale.ROOT);
                 switch (hairChoose) {
                     case "1":
                     case "GREEN":
@@ -211,9 +244,9 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter a minimal point coordinate.");
             }
-            minimalPoint = scanner.nextDouble();
+            minimalPoint = getDouble();
             if (inputMode == InputMode.MANUAL && minimalPoint == null) {
-                System.out.println("Entered minimal point coordinate was empty. Please try again.");
+                System.out.println("Entered minimal point coordinate was empty or invalid. Please try again.");
                 continue;
             }
             break;
@@ -231,7 +264,7 @@ public class InputReader {
                     System.out.print("Variants: \n1. EASY; \n2. NORMAL; \n3. IMPOSSIBLE; \n4. INSANE." +
                             " \nEnter your variant here: ");
                 }
-                difficultyChoose = scanner.next().toUpperCase();
+                difficultyChoose = scanner.nextLine().toUpperCase();
                 switch (difficultyChoose) {
                     case "1":
                     case "EASY":
@@ -297,7 +330,7 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter author name.");
             }
-            author = scanner.next();
+            author = scanner.nextLine();
             if (inputMode == InputMode.MANUAL && (author == null || author.isEmpty())) {
                 System.out.println("Entered author name was empty. Please try again.");
             }
@@ -312,7 +345,7 @@ public class InputReader {
             if (inputMode == InputMode.MANUAL) {
                 System.out.println("Enter passport id.");
             }
-            passportId = scanner.next();
+            passportId = scanner.nextLine();
             if (inputMode == InputMode.MANUAL && (passportId == null || passportId.isEmpty())) {
                 System.out.println("Entered author name was empty. Please try again.");
                 continue;

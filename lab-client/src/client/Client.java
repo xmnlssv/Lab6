@@ -3,8 +3,8 @@ package client;
 import connection.Connection;
 import endpoint.RequestQueue;
 import endpoint.ResponseReceiver;
+import reader.*;
 import utils.LogUtil;
-import reader.CommandReader;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -32,6 +32,12 @@ public class Client {
     private static DatagramChannel channel;
     private static ResponseReceiver responseReceiver = new ResponseReceiver();
     private static Logger logger = LogUtil.getLogger("client");
+    private static boolean connected = true;
+
+    public static boolean hasConnection() {
+        return connected;
+    }
+
     private static void listen() throws IOException {
         while (!selector.keys().isEmpty()) {
             Set<SelectionKey> selectedKeys = selector.selectedKeys();
@@ -81,8 +87,13 @@ public class Client {
             String response = StandardCharsets.UTF_8.decode(buffer.flip()).toString();
             logger.info("Receiving payload from server: {}", response);
             responseReceiver.receiveResponse(response);
+            connected = true;
         } catch (IOException exception) {
             logger.error("Error while reading selector key", exception);
+            if (connected == true) {
+                System.out.println("Sorry, server is temporarily down. Please try again later.");
+            }
+            connected = false;
         }
         key.interestOps(SelectionKey.OP_WRITE);
         selector.wakeup();

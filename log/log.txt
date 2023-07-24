@@ -859,3 +859,1216 @@ Message: Premature end of file.
 21:30:15.355 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.ShowCommand","args":[]},"response":"model.LabWork{id=4710358, name='1', coordinates=model.Coordinates{x=1.0, y=1}, creationDate=2023-07-02T18:16:43.564972Z[UTC], minimalPoint=1.0, difficulty=EASY, author=Author{, name ='1', passportId='1', eyeColor='BLUE', hairColor='GREEN', nationality='UNITED_KINGDOM', location='model.Location{x=1.0, y=1, z=1}'}}\nmodel.LabWork{id=4605259, name='2', coordinates=model.Coordinates{x=2.0, y=2}, creationDate=2023-07-02T18:29:54.544217Z[UTC], minimalPoint=2.0, difficulty=NORMAL, author=Author{, name ='2', passportId='2', eyeColor='YELLOW', hairColor='BLUE', nationality='FRANCE', location='model.Location{x=2.0, y=2, z=2}'}}\n","result":"SUCCESS"}
 21:30:16.322 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.HelpCommand","args":[]}
 21:30:16.326 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.HelpCommand","args":[]},"response":"execute_script filename                     : read and execute script from given file. The same views are found in the script as in the interactive mode\nremove_greater {element}                    : remove all items from the collection that exceed the specified\nshow                                        : output to the standard output stream all elements of the collection in string representation\nclear                                       : remove all items from collection\nsort                                        : sort the collection in natural order\nremove_last                                 : remove the last item from the collection\nremove_any_by_author author                 : remove one item from the collection whose author field value is equivalent to a given\nmin_by_author                               : output any object in the collection whose author field value is the minimum\nadd {element}                               : add new item to collection\nupdate id {element}                         : update the value of the collection element whose Id matches the given one\nprint_field_descending_minimal_point        : output the values of the field minimalPoint of all elements in descending order\nhelp                                        : get help on alternative commands\nremove_by_id id                             : remove an element from the collection by its Id\ninfo                                        : print all collection items into the string representation\n","result":"SUCCESS"}
+04:37:10.932 [main] INFO  server - Saving collection to file...
+04:37:10.964 [main] INFO  server - Successfully saved collection to file!
+04:37:12.211 [main] INFO  server - Saving collection to file...
+04:37:12.216 [main] INFO  server - Successfully saved collection to file!
+04:37:12.216 [main] INFO  server - Server exiting...
+04:37:18.428 [main] INFO  server - Saving collection to file...
+04:37:18.448 [main] INFO  server - Successfully saved collection to file!
+04:37:26.062 [main] INFO  client - Initialized connection to server on port 17605
+04:38:23.061 [main] INFO  client - Initialized connection to server on port 17605
+04:38:26.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:26.893 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:27.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:27.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:27.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:27.292 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:27.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:27.492 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:27.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:27.692 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:27.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:27.892 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:28.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:28.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:28.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:28.292 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:28.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:28.492 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:28.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:28.692 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:28.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:28.892 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:29.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:29.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:29.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:29.292 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:29.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:29.492 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:29.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:29.692 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:29.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:29.893 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:30.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:30.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:30.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:30.292 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:30.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:30.492 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:30.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:30.692 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:30.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:30.892 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:31.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:31.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:31.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:31.292 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:31.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:31.493 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:31.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:31.692 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:31.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:31.892 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:32.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:32.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:32.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:32.293 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:32.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:32.492 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:32.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:32.692 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:32.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:32.892 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:33.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:33.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:33.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:33.293 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:33.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:33.492 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:33.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:33.693 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:33.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:33.893 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:34.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:34.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:34.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:34.292 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:34.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:34.496 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:34.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:34.693 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:34.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:34.893 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:35.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:35.092 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:35.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:35.292 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:35.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:35.493 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:35.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:35.693 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:35.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:35.893 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:36.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:36.093 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:36.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:36.293 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:36.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:36.493 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:36.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:36.693 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:36.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:36.893 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:37.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:37.093 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:37.292 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:37.293 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:37.492 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:37.493 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:37.692 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:37.693 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:37.892 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:37.893 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:38:38.092 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:38:38.093 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:39:18.391 [main] INFO  client - Initialized connection to server on port 17605
+04:40:12.100 [main] INFO  client - Initialized connection to server on port 17605
+04:40:20.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:20.279 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:20.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:20.478 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:20.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:20.678 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:20.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:20.878 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:21.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:21.078 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:21.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:21.278 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:21.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:21.478 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:21.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:21.679 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:21.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:21.878 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:22.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:22.079 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:22.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:22.279 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:22.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:22.478 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:22.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:22.679 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:22.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:22.878 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:23.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:23.079 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:23.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:23.279 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:23.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:23.479 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:23.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:23.678 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:23.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:23.879 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:24.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:24.079 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:24.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:24.278 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:24.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:24.478 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:24.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:24.679 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:24.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:24.878 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:25.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:25.079 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:25.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:25.278 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:25.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:25.478 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:25.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:25.678 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:25.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:25.879 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:26.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:26.078 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:26.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:26.279 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:26.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:26.479 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:26.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:26.679 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:26.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:26.879 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:27.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:27.079 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:27.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:27.279 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:27.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:27.479 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:27.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:27.679 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:27.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:27.879 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:28.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:28.080 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:28.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:28.279 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:28.478 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:28.479 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:28.678 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:28.679 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:28.878 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:28.879 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:29.078 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:29.079 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:29.278 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:29.279 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:29.479 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:29.479 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:29.679 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:29.679 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:29.879 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:29.879 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:30.079 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:30.079 [Thread-0] ERROR client - Error while reading selector key
+java.net.PortUnreachableException: null
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive0(Native Method)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receiveIntoNativeBuffer(DatagramChannelImpl.java:750)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:736)
+	at java.base/sun.nio.ch.DatagramChannelImpl.receive(DatagramChannelImpl.java:543)
+	at client.Client.read(Client.java:86)
+	at client.Client.listen(Client.java:48)
+	at client.Client.lambda$initializeConnection$0(Client.java:72)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+04:40:30.279 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:30.295 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.ShowCommand","args":[]}
+04:40:30.661 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.ShowCommand","args":[]},"response":"","result":"SUCCESS"}
+04:40:30.663 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.ShowCommand","args":[]},"response":"","result":"SUCCESS"}
+04:40:35.507 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:35.508 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.ShowCommand","args":[]}
+04:40:35.510 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.ShowCommand","args":[]},"response":"","result":"SUCCESS"}
+04:40:35.510 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.ShowCommand","args":[]},"response":"","result":"SUCCESS"}
+04:40:50.363 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:40:50.364 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.ShowCommand","args":[]}
+04:40:50.366 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.ShowCommand","args":[]},"response":"","result":"SUCCESS"}
+04:40:50.367 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.ShowCommand","args":[]},"response":"","result":"SUCCESS"}
+04:41:32.976 [main] INFO  client - Initialized connection to server on port 17605
+04:44:19.036 [main] INFO  client - Initialized connection to server on port 17605
+04:44:46.647 [Thread-0] INFO  client - Sending payload to server: {"command":"command.AddCommand","args":["{\"id\":null,\"name\":\"j\",\"coordinates\":{\"x\":1.0,\"y\":1},\"creationDate\":1690163068.422849000,\"minimalPoint\":1.0,\"difficulty\":\"INSANE\",\"author\":{\"name\":\"kd\",\"passportId\":\"od\",\"eyeColor\":\"ORANGE\",\"hairColor\":\"YELLOW\",\"nationality\":\"INDIA\",\"location\":{\"x\":9.0,\"y\":9,\"z\":9}}}"]}
+04:44:46.681 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.AddCommand","args":["{\"id\":null,\"name\":\"j\",\"coordinates\":{\"x\":1.0,\"y\":1},\"creationDate\":1690163068.422849000,\"minimalPoint\":1.0,\"difficulty\":\"INSANE\",\"author\":{\"name\":\"kd\",\"passportId\":\"od\",\"eyeColor\":\"ORANGE\",\"hairColor\":\"YELLOW\",\"nationality\":\"INDIA\",\"location\":{\"x\":9.0,\"y\":9,\"z\":9}}}"]}
+04:44:47.008 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.AddCommand","args":["{\"id\":1670563,\"name\":\"j\",\"coordinates\":{\"x\":1.0,\"y\":1},\"creationDate\":1690163068.422849000,\"minimalPoint\":1.0,\"difficulty\":\"INSANE\",\"author\":{\"name\":\"kd\",\"passportId\":\"od\",\"eyeColor\":\"ORANGE\",\"hairColor\":\"YELLOW\",\"nationality\":\"INDIA\",\"location\":{\"x\":9.0,\"y\":9,\"z\":9}}}"]},"response":null,"result":"SUCCESS"}
+04:44:47.010 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.AddCommand","args":["{\"id\":1670563,\"name\":\"j\",\"coordinates\":{\"x\":1.0,\"y\":1},\"creationDate\":1690163068.422849000,\"minimalPoint\":1.0,\"difficulty\":\"INSANE\",\"author\":{\"name\":\"kd\",\"passportId\":\"od\",\"eyeColor\":\"ORANGE\",\"hairColor\":\"YELLOW\",\"nationality\":\"INDIA\",\"location\":{\"x\":9.0,\"y\":9,\"z\":9}}}"]},"response":null,"result":"SUCCESS"}
+04:44:49.359 [Thread-0] INFO  client - Sending payload to server: {"command":"command.ShowCommand","args":[]}
+04:44:49.362 [Thread-0] INFO  server - Receiving payload from client: {"command":"command.ShowCommand","args":[]}
+04:44:49.379 [Thread-0] INFO  server - Sending payload to client: {"request":{"command":"command.ShowCommand","args":[]},"response":"model.LabWork{id=1670563, name='j', coordinates=model.Coordinates{x=1.0, y=1}, creationDate=2023-07-24T01:44:28.422849Z[UTC], minimalPoint=1.0, difficulty=INSANE, author=Author{, name ='kd', passportId='od', eyeColor='ORANGE', hairColor='YELLOW', nationality='INDIA', location='model.Location{x=9.0, y=9, z=9}'}}\n","result":"SUCCESS"}
+04:44:49.380 [Thread-0] INFO  client - Receiving payload from server: {"request":{"command":"command.ShowCommand","args":[]},"response":"model.LabWork{id=1670563, name='j', coordinates=model.Coordinates{x=1.0, y=1}, creationDate=2023-07-24T01:44:28.422849Z[UTC], minimalPoint=1.0, difficulty=INSANE, author=Author{, name ='kd', passportId='od', eyeColor='ORANGE', hairColor='YELLOW', nationality='INDIA', location='model.Location{x=9.0, y=9, z=9}'}}\n","result":"SUCCESS"}
+04:44:56.401 [main] INFO  server - Saving collection to file...
+04:44:56.432 [main] INFO  server - Successfully saved collection to file!
+04:44:56.432 [main] INFO  server - Server exiting...
